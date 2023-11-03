@@ -1,0 +1,1 @@
+python /usersetup/linux/scripts/maya_sc/SearchNode/build.py build_ext --inplace
