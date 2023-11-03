@@ -7,7 +7,7 @@ sys.path.append(_path)
 
 
 from PipeLibrary.source.pipeQT import GradientProgressbarDialog
-from PyQt5.QtWidgets import QApplication
+from PySide2.QtWidgets import QApplication
 import sys
 
 

@@ -1,6 +1,6 @@
 
-from PyQt5.QtWidgets import QApplication, QProgressBar
-from PyQt5.QtCore import pyqtProperty, QPropertyAnimation, QAbstractAnimation, QEasingCurve
+from PySide2.QtWidgets import QApplication, QProgressBar
+from PySide2.QtCore import Property, QPropertyAnimation, QEasingCurve
 from time import sleep
 
 
@@ -28,7 +28,7 @@ class GMProgressbar(QProgressBar):
                             }}
                            ''')
         
-    @pyqtProperty(float)
+    @Property(float)
     def stop01_pose(self):
         return self._x
     

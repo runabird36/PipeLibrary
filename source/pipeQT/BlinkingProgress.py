@@ -1,5 +1,5 @@
-from PyQt5.QtWidgets import QApplication, QProgressBar
-from PyQt5.QtCore import pyqtProperty, QPropertyAnimation, QAbstractAnimation, QEasingCurve
+from PySide2.QtWidgets import QApplication, QProgressBar
+from PySide2.QtCore import Property, QPropertyAnimation, QAbstractAnimation, QEasingCurve
 from time import sleep
 
 class BlinkingProgressbar(QProgressBar):
@@ -26,7 +26,7 @@ class BlinkingProgressbar(QProgressBar):
                             }}
                            ''')
         
-    @pyqtProperty(int)
+    @Property(int)
     def chunk_color(self):
         return self._chunk_color
     

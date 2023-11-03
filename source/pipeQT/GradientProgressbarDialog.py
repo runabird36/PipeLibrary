@@ -7,12 +7,12 @@ if __name__ == "__main__":
 else:
     from . import GradientMovingProgressbar
 
-from PyQt5.QtWidgets import (
-                                QMainWindow, QTableWidget, QTableWidgetItem, QVBoxLayout, QHBoxLayout,
-                                QWidget, QApplication, QLabel, QPushButton, QAbstractItemView, QDesktopWidget
+from PySide2.QtWidgets import (
+                                QMainWindow, QVBoxLayout, QHBoxLayout,
+                                QWidget, QApplication, QLabel, QPushButton, QDesktopWidget
                             )
-from PyQt5.QtCore import Qt, QProcess
-from PyQt5.QtGui import QResizeEvent, QPixmap, QPainter, QPaintEvent
+from PySide2.QtCore import Qt
+
 
 
 
