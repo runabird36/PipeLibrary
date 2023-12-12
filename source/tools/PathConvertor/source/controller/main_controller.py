@@ -54,6 +54,8 @@ class MainEngine():
             from ..toolkit.path_toolkit import LnxPathConvertor
             self.path_tool = LnxPathConvertor()
 
+        self.view.switch_hint(cur_mode)
+
 def main() -> None:
     from PySide2.QtWidgets import QApplication
     app = QApplication(sys.argv)

@@ -335,6 +335,12 @@ class MainView(QMainWindow):
             self.from_input_le.setPlaceholderText("리눅스 경로 입력")
         elif is_linux():
             self.from_input_le.setPlaceholderText("윈도우 경로 입력")
+
+    def switch_hint(self, cur_os :str) -> None:
+        if cur_os.lower() == "win":
+            self.from_input_le.setPlaceholderText("리눅스 경로 입력")
+        elif cur_os.lower() == "linux":
+            self.from_input_le.setPlaceholderText("윈도우 경로 입력")
             
     def get_cur_mode(self) -> str:
         return self.mode_toggle_cb.get_cur_mode()
