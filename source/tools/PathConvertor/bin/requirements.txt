@@ -1,0 +1,16 @@
+wheel==0.42.0
+Lucidity==1.6.0
+PyQt5==5.15.6
+PyQt5-Qt5==5.15.2
+PyQt5-sip==12.9.1
+PyQt5-stubs==5.15.2.0
+PySide2==5.15.2.1
+pytube==15.0.0
+pywin32==303
+PyYAML==6.0.1
+qt-material==2.14
+requests==2.28.1
+shiboken2==5.15.2.1
+shotgun-api3==3.3.5
+six==1.16.0
+clipboard==0.0.4

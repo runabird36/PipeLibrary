@@ -1,0 +1,1 @@
+set PYTHONPATH=%PYTHONPATH%;Z:\linux\scripts\general_sc\PathConvertor && C:\Python38\python.exe -m source.controller.main_controller

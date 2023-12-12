@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usersetup/linux/scripts/general_sc/PathConvertor/bin/PathConvertor.sh
+Name=Application Launcher
+Icon=/usersetup/linux/module/ui_icons_md/Yeti_texNodeCtrl.png
+Categories=Graphics
+
