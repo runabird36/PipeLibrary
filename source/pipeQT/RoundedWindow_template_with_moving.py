@@ -62,6 +62,10 @@ class RoundedWindow(QMainWindow):
         
         horizontal_spacer = ClickableSpacer(self)
         
+        self.minimize_btn = QPushButton("-")
+        self.minimize_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
+        self.minimize_btn.clicked.connect(self.close)
+        
         self.close_btn = QPushButton("X")
         self.close_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
         self.close_btn.clicked.connect(self.close)
@@ -76,9 +80,11 @@ class RoundedWindow(QMainWindow):
         
         self.sub_hl = QHBoxLayout()
         self.sub_hl.addWidget(horizontal_spacer)
+        self.sub_hl.addWidget(self.minimize_btn)
         self.sub_hl.addWidget(self.close_btn)
         self.sub_hl.setStretch(0, 20)
         self.sub_hl.setStretch(1, 1)
+        self.sub_hl.setStretch(2, 1)
         self.sub_hl.setContentsMargins(0, 0, 10, 5)
         
         
