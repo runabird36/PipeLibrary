@@ -64,7 +64,7 @@ class RoundedWindow(QMainWindow):
         
         self.minimize_btn = QPushButton("-")
         self.minimize_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
-        self.minimize_btn.clicked.connect(self.close)
+        self.minimize_btn.clicked.connect(self.showMinimized)
         
         self.close_btn = QPushButton("X")
         self.close_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
