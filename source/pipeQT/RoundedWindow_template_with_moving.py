@@ -63,11 +63,11 @@ class RoundedWindow(QMainWindow):
         horizontal_spacer = ClickableSpacer(self)
         
         self.minimize_btn = QPushButton("-")
-        self.minimize_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
+        self.minimize_btn.setStyleSheet(f'''QPushButton{{background-color:rgba(49,54,59,0);padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
         self.minimize_btn.clicked.connect(self.showMinimized)
         
         self.close_btn = QPushButton("X")
-        self.close_btn.setStyleSheet(f'''QPushButton{{padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
+        self.close_btn.setStyleSheet(f'''QPushButton{{background-color:rgba(49,54,59,0);padding-top:13px;border: none;font: 20pt;color : #f0f0f0;}}''')
         self.close_btn.clicked.connect(self.close)
         
         
@@ -107,7 +107,7 @@ class RoundedWindow(QMainWindow):
             border-bottom-left-radius:{0}px;
             border-top-right-radius:{0}px;
             border-bottom-right-radius:{0}px;
-            background-color:rgba(49,54,59,255);'''.format("8"))
+            background-color:rgba(49,54,59,180);'''.format("8"))
         
         # rgba(29, 34, 39, 255)
         
