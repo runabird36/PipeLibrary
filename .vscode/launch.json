@@ -17,6 +17,13 @@
             "request": "launch",
             "module": "source.pipeQT.IconModeListwidget",
             "justMyCode": true
+        },
+        {
+            "name": "Python: Splitter widget",
+            "type": "python",
+            "request": "launch",
+            "module": "source.pipeQT.SplitterWidget",
+            "justMyCode": true
         }
     ]
 }

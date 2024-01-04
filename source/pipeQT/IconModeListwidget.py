@@ -1,7 +1,7 @@
 import sys, os
-from PySide2.QtWidgets import QWidget, QVBoxLayout, QApplication
+from PySide2.QtWidgets import QWidget, QVBoxLayout, QApplication, QSpacerItem, QSizePolicy
 from PySide2.QtCore import Slot
-from .Ui_library.app_custom_ui import ListWidget, ListItemWidget
+from .Ui_library.app_custom_ui import ListWidget, ListItemWidget, Splitter, CollapsIcon
 from qt_material import apply_stylesheet
 
 
@@ -17,6 +17,8 @@ class MainView(QWidget):
         item01.signal.connect(self.app_thumbnail_clicked)
         self.icon_view_lw = ListWidget(square_icon=True)
         self.icon_view_lw.addListItem(item01)
+        
+        
         
         self.main_vl = QVBoxLayout()
         self.main_vl.addWidget(self.icon_view_lw)
@@ -41,7 +43,6 @@ class MainView(QWidget):
             
             # app_msg_dialog.MessageDialog(u'앱실행중 에러가 발생하였습니다.', parent=QtWidgets.QApplication.activeWindow()).exec_()
 
-        
         
         
 if __name__ == "__main__":

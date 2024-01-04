@@ -4,6 +4,28 @@ from .app_path_module import *
 from .app_constant_module import *
 
 class FrameBox(QtWidgets.QGroupBox):
+    '''
+    How to use : 
+        self.apps_tab = TabMainWidget()
+        -> apps_group = app_custom_ui.FrameBox('rgb(50, 50, 50)')
+        apps_layout = QtWidgets.QVBoxLayout()
+        apps_layout.addWidget(self.apps_tab)
+        apps_layout.setContentsMargins(0, 4, 0, 0)
+        -> apps_group.setLayout(apps_layout)
+
+        self.banners_widget = BannersWidget()
+        banners_group = app_custom_ui.FrameBox('rgb(50, 50, 50)')
+        banners_layout = QtWidgets.QHBoxLayout()
+        banners_layout.addWidget(self.banners_widget)
+        banners_layout.setContentsMargins(0, 0, 0, 0)
+        banners_group.setLayout(banners_layout)
+
+        layout = QtWidgets.QVBoxLayout(main_widget)
+        -> layout.addWidget(apps_group, 25)
+        layout.addWidget(banners_group, 1)
+        layout.setContentsMargins(0, 0, 0, 0)
+        layout.setSpacing(0)
+    '''
     def __init__(self, background_color, border_style=False, border_radius='0px', parent=None):
         QtWidgets.QGroupBox.__init__(self)
 
@@ -51,14 +73,18 @@ class CollapsIcon(QtWidgets.QPushButton):
         self.setText(label_text)
         self.setFocusPolicy(Qt.NoFocus)
         self.setCursor(Qt.PointingHandCursor)
-        self.setIconSize(QtCore.QSize(int(12), int(12)))
+        self.setIconSize(QtCore.QSize(int(50), int(12)))
         self.setIcon(QtGui.QPixmap(UI_ICON_PATH+'arrow_open.png'))
-        self.setStyleSheet('QPushButton { background-color:transparent; border-style:outset; text-align:left; font-weight: semi-bold; color: white; font: 11pt; font-family: %s }'
+        # self.setStyleSheet('QPushButton { background-color:transparent; border-style:outset; text-align:left; font-weight: semi-bold; color: white; font: 11pt; font-family: %s }'
+        #                    %(UI_FONT_FAMILTY)
+        #                    )
+        self.setStyleSheet('QPushButton { background-color:transparent; border:none; padding-left:1px; padding-top:10px; text-align:left; font-weight: semi-bold; color: white; font: 11pt; font-family: %s }'
                            %(UI_FONT_FAMILTY)
                            )
 
         self.setFixedSize(self.sizeHint())
         self.toggled.connect(self.setStateChanged)
+        # self.setContentsMargins(10, 10, 10, 10)
 
     @QtCore.Slot(bool)
     def setStateChanged(self, state):

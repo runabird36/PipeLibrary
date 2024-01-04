@@ -4,7 +4,8 @@ APP_NAME                = 'Application Launcher'
 
 APP_WINDOW_ICON         = 'window_icon.png'
 
-APP_CACHE_PATH          = os.path.join(os.path.dirname(os.path.abspath(__file__)),'cache').replace('\\', '/')
+APP_CACHE_PATH          = (os.path.dirname(os.path.abspath(__file__))).split("/source/")[0] + "/resource"
+print(APP_CACHE_PATH)
 
 APP_LOG_PATH            = APP_CACHE_PATH+'/'+'app_logs'
 
